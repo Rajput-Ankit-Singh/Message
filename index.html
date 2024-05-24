@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ <style type="text/css">
+    @font-face {
+  font-family: 'Inconsolata' !important;
+  src: url('Inconsolata.otf') format("truetype");
+    }
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+<style>
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+    
+body {
+      text-align: center;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+      color: #333;
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #content {
+      display: none;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+    button {
+      padding: 1em 2em;
+      font-size: 1.5em;
+      color: white;
+      background-color: #ff4081;
+      border: none;
+      border-radius: 0.5em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #e91e63;
+    }
+    .cake_and_velas {
+      position: absolute;
+      bottom: 25%;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+    }
+    
+    #cake {
+      display: block;
+      position: relative;
+      margin: -10em auto 0 auto;
+    }
+    
+    .velas {
+      background: #ffffff;
+      border-radius: 10px;
+      position: absolute;
+      top: 228px;
+      left: 50%;
+      margin-left: -2.4px;
+      margin-top: -8.33333333px;
+      width: 5px;
+      height: 35px;
+      -webkit-transform: translateY(-300px);
+      transform: translateY(-300px);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-animation: in 500ms 5s ease-out forwards;
+      animation: in 500ms 5s ease-out forwards;
+    }
+    
+    .velas:after,
+    .velas:before {
+      background: rgba(255, 0, 0, 0.4);
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2.22222222px;
+    }
+    
+    .velas:after {
+      top: 25%;
+      left: 0;
+    }
+    
+    .velas:before {
+      top: 45%;
+      left: 0;
+    }
+    
+    /* ============================================== Fire
+    */
+    .fuego {
+      border-radius: 100%;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      margin-left: -2.6px;
+      width: 6.66666667px;
+      height: 18px;
+    }
+    
+    .fuego:nth-child(1) {
+      -webkit-animation: fuego 2s 5.5s infinite;
+      animation: fuego 2s 5.5s infinite;
+    }
+    
+    .fuego:nth-child(2) {
+      -webkit-animation: fuego 1.5s 5.5s infinite;
+      animation: fuego 1.5s 5.5s infinite;
+    }
+    
+    .fuego:nth-child(3) {
+      -webkit-animation: fuego 1s 5.5s infinite;
+      animation: fuego 1s 5.5s infinite;
+    }
+    
+    .fuego:nth-child(4) {
+      -webkit-animation: fuego 0.5s 5.5s infinite;
+      animation: fuego 0.5s 5.5s infinite;
+    }
+    
+    .fuego:nth-child(5) {
+      -webkit-animation: fuego 0.2s 5.5s infinite;
+      animation: fuego 0.2s 5.5s infinite;
+    }
+    
+    /* ============================================== Animation Fire
+    */
+    @-webkit-keyframes fuego {
+      0%, 100% {
+        background: rgba(254, 248, 97, 0.5);
+        -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+        box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+        -webkit-transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        background: rgba(255, 50, 0, 0.1);
+        -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+        box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+        -webkit-transform: translateY(-20px) scale(0);
+        transform: translateY(-20px) scale(0);
+      }
+    }
+    @keyframes fuego {
+      0%, 100% {
+        background: rgba(254, 248, 97, 0.5);
+        -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+        box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+        -webkit-transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        background: rgba(255, 50, 0, 0.1);
+        -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+        box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+        -webkit-transform: translateY(-20px) scale(0);
+        transform: translateY(-20px) scale(0);
+      }
+    }
+    @-webkit-keyframes in {
+      to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+    @keyframes in {
+      to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+    @-webkit-keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+#code {
+  float:left;
+  position: fixed;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size:20px
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>
+    <span style="--i:1;">H</span> 
+    <span style="--i:2;">A</span>
+    <span style="--i:3;">P</span>
+    <span style="--i:4;">P</span>
+    <span style="--i:5;">Y</span>
+    <span style="--i:6;margin-left:7vw ;">B</span>
+    <span style="--i:8;">I</span>
+    <span style="--i:9;">R</span>
+    <span style="--i:10;">T</span>
+    <span style="--i:10;">H</span>
+    <span style="--i:12;">D</span>
+    <span style="--i:13;">A</span>
+    <span style="--i:14;">Y</span>
+  </h2>
+  <p>Hey there! I'm Ankit, <br> and I made those personal webpage <br> especially for you to wish your birthday.</p>
+  <p>I hope those page <br> brings a smile to your face and makes <br> your day a little brighter.</p>
+  <p>Wishing you all the <br> happiness, joy, and success in the world. <br> Have an amazing birthday!</p>
+  <div id="note"> 
+    <span style='color:#ff0000; '> <big><big>Note:-</big></big> </span>  I used "Angreji" in all these web pages not because I do not know <br> Hindi but so that you do not face any problem in reading and <br> understanding, because you are "Angrej". 
+  </div>
+  <div id="code">
+    <span style='color:#000000; '>   Made </span><span style='color:#000000; '> With</span><span style='color:#ff0000; '> ❤ </span><span style='color:#000000; ; '>by </span><span style='color:#000000;'> Ankit
+            </div>
+
+  <script>
+    document.getElementById('cake_fadein').addEventListener('click', function() {
+      document.getElementById('content').style.display = 'block';
+      // Hide all text elements
+      var textElements = document.querySelectorAll('h1, p, button');
+      textElements.forEach(function(element) {
+        element.style.display = 'none';
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    var together = new Date();
+
+    if (!document.createElement('canvas').getContext) {
+        
+        $("#code").css("display", "none")
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+    } else {
+        setTimeout(function () {
+            startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function () {
+            timeElapse(together);
+        }, 500);
+
+        adjustCodePosition();
+        $("#code").typewriter();
+    }
+</script>
+</body>
+</html>
