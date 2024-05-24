@@ -14,13 +14,13 @@ body
     min-height: 100vh;
     background-color: #111;
 }
-h6
+h3
 {
     display: flex;
     color: transparent;
     font-size: 15vw;
 }
-h6 span
+h3bspan
 {
     animation: animate 3s linear infinite;
     animation-delay:calc(0.1s * var(--i));
